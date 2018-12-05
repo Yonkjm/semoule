@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="exercice.xsl.xml"?>
+
+<ecole xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="exercice.xsd">
+
+	<nom>Polytech' Nice Sophia</nom>
+	<diplome> Ingénieur </diplome>
+	<ville> Biot </ville>
+
+	<etudiants>
+		<etudiant id="ETU-0">
+			<nom> Bonnet </nom>
+			<prenom> Theo </prenom>
+			<genre>Homme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1995</annee>
+            </date_de_naissance>
+		</etudiant>
+		<etudiant id="ETU-1">
+			<nom> Islem </nom>
+			<prenom> Larabi </prenom>
+			<genre>Homme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1995</annee>
+            </date_de_naissance>
+		</etudiant>
+		<etudiant id="ETU-2">
+			<nom> Nathan </nom>
+			<prenom> Strobbe </prenom>
+			<genre>Homme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1995</annee>
+            </date_de_naissance>
+		</etudiant>
+	</etudiants>
+
+	<enseignants>
+		<enseignant id="ENS-0">
+			<nom> Philippe </nom>
+			<prenom> Collet </prenom>
+			<genre>Homme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1975</annee>
+            </date_de_naissance>
+        </enseignant>
+		<enseignant id="ENS-1">
+			<nom> Sebastien </nom>
+			<prenom> Mosser </prenom>
+			<genre>Homme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1975</annee>
+            </date_de_naissance>
+        </enseignant>
+        <enseignant id="ENS-2">
+			<nom> Christophe </nom>
+			<prenom> Papazian </prenom>
+			<genre>Homme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1975</annee>
+            </date_de_naissance>
+        </enseignant>
+    </enseignants>
+
+    <matieres>
+	    <matiere id="MAT-0">
+	    	<nom> Langages du web </nom>
+	    	<UE> 2 </UE>
+	    	<coeff> 3 </coeff>
+	    	<etudiants_matiere>
+	    		<etudiant id="ETU-2"/>
+	    		<etudiant id="ETU-1"/>
+	    	</etudiants_matiere>		    	
+	    	<enseignants_matiere>
+	    		<enseignant id="ENS-0"/>
+	    		<enseignant id="ENS-1"/>
+	    	</enseignants_matiere>
+	    </matiere>
+	    <matiere id="MAT-1">
+	    	<nom> C++ </nom>
+	    	<UE> 2 </UE>
+	    	<coeff> 3 </coeff>
+	    	<etudiants_matiere>
+	    		<etudiant id="ETU-2"/>
+	    		<etudiant id="ETU-1"/>
+	    	</etudiants_matiere>		    	<enseignants_matiere>
+	    		<enseignant id="ENS-1"/>
+	    	</enseignants_matiere>	    
+		</matiere>
+	    <matiere id="MAT-2">
+	    	<nom> Concaption Logicielle </nom>
+	    	<UE> 2 </UE>
+	    	<coeff> 3 </coeff>
+	    	<etudiants_matiere>
+	    		<etudiant id="ETU-2"/>
+	    		<etudiant id="ETU-1"/>
+	    	</etudiants_matiere>	 
+	    	<enseignants_matiere>
+	    		<enseignant id="ENS-2"/>
+	    		<enseignant id="ENS-1"/>
+	    	</enseignants_matiere>	    
+	    </matiere>
+	</matieres>
+
+
+	<specialite nom="SI" directeur="ENS-2">
+		<promotion annee="3A">
+			<responsable idEnseignant="ENS-0"></responsable>
+			<etudiants_promotion>
+	    		<etudiant id="ETU-2"/>
+	    		<etudiant id="ETU-1"/>
+	    	</etudiants_promotion>
+	    	<matieres_promotion>
+	    		<matiere id="MAT-0"/>
+	    		<matiere id="MAT-1"/>
+	    	</matieres_promotion>
+		</promotion>
+	</specialite>
+</ecole>

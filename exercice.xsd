@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<xsd:complexType name="date_de_naissance">
+		<xsd:sequence>
+	        <xsd:element name="jour" type="xsd:integer"/>
+	        <xsd:element name="mois" type="xsd:integer"/>
+	        <xsd:element name="annee" type="xsd:integer"/>
+	    </xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="genre">
+	    <xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Femme"/> 
+			<xsd:enumeration value="Homme"/> 
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+    <!-- declaration des etudiants-->
+
+	<xsd:complexType name="etudiant">
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string"/>
+			<xsd:element name="prenom" type="xsd:string"/>
+	        <xsd:element name="genre" type="genre"/>
+	        <xsd:element name="date_de_naissance" type="date_de_naissance"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+	</xsd:complexType>
+
+    <xsd:complexType name="etudiants">
+            <xsd:sequence>
+                <xsd:element name="etudiant" type="etudiant" maxOccurs="unbounded" minOccurs="0"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+
+    <!-- declaration des enseignants-->
+
+
+	<xsd:complexType name="enseignant">
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string"/>
+			<xsd:element name="prenom" type="xsd:string"/>
+			<xsd:element name="genre" type="genre"/>
+	        <xsd:element name="date_de_naissance" type="date_de_naissance"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+	</xsd:complexType>
+
+    <xsd:complexType name="enseignants">
+            <xsd:sequence>
+                <xsd:element name="enseignant" type="enseignant" maxOccurs="unbounded" minOccurs="0"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+   	<!-- declaration des matières -->
+
+   	<xsd:complexType name="matiere">
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string"/>
+			<xsd:element name="UE" type="xsd:string"/>
+			<xsd:element name="coeff" type="xsd:string"/>
+			<xsd:element name="etudiants_matiere" type="listeEtudiants"/>
+			<xsd:element name="enseignants_matiere" type="listeEnseignants">
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:ID" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="matieres">
+        <xsd:sequence>
+            <xsd:element name="matiere" type="person_item" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <!-- La liste des etudiants dans la matiere avec chaqun un id-->
+
+	<xsd:complexType name="listeEtudiants">
+		<xsd:sequence>
+			<xsd:element name="etudiant" type="person_item" maxOccurs="unbounded" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="person_item">
+			<xsd:attribute name="id" type="xsd:IDREFS" use="required"/>
+	</xsd:complexType>
+
+    <!-- La liste des enseignants dans la matiere avec chaqun un id-->
+
+
+	<xsd:complexType name="listeEnseignants">
+		<xsd:sequence>
+			<xsd:element name="enseignant" type="person_item" maxOccurs="unbounded" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+
+
+	<!-- declaration des specialités-->
+
+
+	<xsd:complexType name="specialite">
+		<xsd:sequence>
+			<xsd:element name="promotion" type="promotion"/>
+		</xsd:sequence>
+		<xsd:attribute name="directeur" type="xsd:IDREFS" use="required"/>
+		<xsd:attribute name="nom"  use="required"/>
+	</xsd:complexType>
+
+
+    <!-- declaration des promotions-->
+
+
+	<xsd:simpleType name="promo">
+	  <xsd:restriction base="xsd:string">
+	    <xsd:enumeration value="3A" />
+	    <xsd:enumeration value="4A" />
+	    <xsd:enumeration value="5A" />
+	  </xsd:restriction>
+	</xsd:simpleType>
+
+    <xsd:complexType name="promotion">
+    	<xsd:all>
+    		<xsd:element name="responsable" type="responsable"/>
+    		<xsd:element name="etudiants_promotion" type="listeEtudiants"/>
+    		<xsd:element name="matieres" type="listeMatieres"/>
+        </xsd:all>
+        <xsd:attribute name="idRefs" type="xsd:IDREFS"/>
+        <xsd:attribute name="annee" type="promo" use="required"/>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="listeMatieres">
+		<xsd:attribute name="id" type="xsd:IDREFS" use="required"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="responsable">
+		<xsd:attribute name="idEnseignant" type="xsd:IDREFS" use="required"/>
+	</xsd:complexType>
+
+
+    <!-- Element racine: l'école-->
+
+	<xsd:element name="ecole">
+        <xsd:complexType>
+        	<xsd:sequence>
+				<xsd:element name="nom" type="xsd:string"/>
+				<xsd:element name="diplome" type="xsd:string"/> 
+				<xsd:element name="ville" type="xsd:string"/> 
+			    <xsd:element name="etudiants" type="etudiants"/>
+			    <xsd:element name="enseignants" type="enseignants"/>
+			    <xsd:sequence>
+			    <xsd:element name="matieres_promotion" type="matieres"/>
+			    <xsd:element name="specialite" type="specialite"/>
+	        	</xsd:sequence>
+	        </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
+        	
