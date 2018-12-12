@@ -1,1 +1,16 @@
-afaire.txt
+(Rapport peu développé. Fichier XML avec une seule promotion.	Réutiliser les types XSD existants avant d'en définir de nouveaux. Les éléments etudiant et enseignant devraient avoir le même type mutualisé.)
+
+- Il devrait pouvoir y avoir plus qu'une specialité. Il manque davantage de travail sur les types simples et sur la définition des key/keyref. Et pour garder la structuration choisie il faudrait définir un type liste de valeurs qui sont des références à des étudiants ou à des enseignants. (Yon) 
+
+- Pas de namespace. (Simon)
+
+
+------------- Scénarios --------------
+
+- arbre avec pour chaque etudiant ses matières (Yon)
+- pour chaque prof ses matières (Simon)
+- les directeurs de chaque spécialité + nombre d'étudiants (Yon)
+- 4 (Simon)
+
+
+
