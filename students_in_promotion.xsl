@@ -18,6 +18,7 @@
                 <h1>List of students per promotion</h1>
                 <blockquote>
                     <ul>
+                        <!-- Selection des spécialités -->
                         <xsl:apply-templates select="//specialite"/>
                     </ul>
                 </blockquote>
@@ -25,29 +26,36 @@
         </html>
     </xsl:template>
 
+    <!-- Template qui sélectionne les spécialités -->
     <xsl:template match="specialite">
         <li>
+            <!-- On affiche le nom de la spécialité -->
             <p><xsl:value-of select="@nom"/></p>
             <ul>
+                <!-- Selection des promotions -->
                 <xsl:apply-templates select="./promotion"/>
             </ul>
         </li>
     </xsl:template>
 
+    <!-- Template qui sélectionne les promotions -->
     <xsl:template match="promotion">
         <li>
+            <!-- Affichage de l'année -->
             <p><xsl:value-of select="@annee"/></p>
             <ul>
+                <!-- Selection de l'étudiant de la promotion -->
                 <xsl:variable name="id" select="./etudiants_promotion/etudiant/@id"/>
                 <xsl:apply-templates select="../../etudiants/etudiant[@id = $id]"/>
             </ul>
         </li>
     </xsl:template>
 
-
+<!-- Template qui sélectionne les étudiants -->
     <xsl:template match="etudiant">
         <li>
             <p>
+                <!-- Affichage du nom et du prénom -->
                 <xsl:value-of select="./nom"/> <xsl:value-of select="./prenom"/>
             </p>
         </li>

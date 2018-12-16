@@ -1,5 +1,4 @@
 {
-  "@schemaLocation": "exercice.xsd",
   "nom": "Polytech' Nice Sophia",
   "diplome": "Ingénieur",
   "ville": "Biot",
@@ -31,6 +30,39 @@
       "nom": "Nathan",
       "prenom": "Strobbe",
       "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1995"
+      }
+    },
+    {
+      "@id": "ETU-4",
+      "nom": "Prune",
+      "prenom": "Pilonne",
+      "genre": "Femme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1995"
+      }
+    },
+    {
+      "@id": "ETU-5",
+      "nom": "Marion",
+      "prenom": "Sazrak",
+      "genre": "Femme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1995"
+      }
+    },
+    {
+      "@id": "ETU-6",
+      "nom": "Michel",
+      "prenom": "Drucker",
+      "genre": "Femme",
       "date_de_naissance": {
         "jour": "10",
         "mois": "01",
@@ -117,7 +149,73 @@
     },
     {
       "@id": "MAT-2",
-      "nom": "Concaption Logicielle",
+      "nom": "Conception Logicielle",
+      "UE": "2",
+      "coeff": "3",
+      "etudiants_matiere": [
+        {
+          "@id": "ETU-2"
+        },
+        {
+          "@id": "ETU-1"
+        }
+      ],
+      "enseignants_matiere": [
+        {
+          "@id": "ENS-2"
+        },
+        {
+          "@id": "ENS-1"
+        }
+      ]
+    },
+    {
+      "@id": "MAT-3",
+      "nom": "Probabilités",
+      "UE": "2",
+      "coeff": "3",
+      "etudiants_matiere": [
+        {
+          "@id": "ETU-4"
+        },
+        {
+          "@id": "ETU-5"
+        }
+      ],
+      "enseignants_matiere": [
+        {
+          "@id": "ENS-2"
+        },
+        {
+          "@id": "ENS-1"
+        }
+      ]
+    },
+    {
+      "@id": "MAT-4",
+      "nom": "Algorithmie",
+      "UE": "2",
+      "coeff": "3",
+      "etudiants_matiere": [
+        {
+          "@id": "ETU-2"
+        },
+        {
+          "@id": "ETU-1"
+        }
+      ],
+      "enseignants_matiere": [
+        {
+          "@id": "ENS-2"
+        },
+        {
+          "@id": "ENS-1"
+        }
+      ]
+    },
+    {
+      "@id": "MAT-5",
+      "nom": "Regressions linéaires",
       "UE": "2",
       "coeff": "3",
       "etudiants_matiere": [
@@ -138,30 +236,88 @@
       ]
     }
   ],
-  "specialite": {
-    "@nom": "SI",
-    "@directeur": "ENS-2",
-    "promotion": {
-      "@annee": "3A",
-      "responsable": {
-        "@idEnseignant": "ENS-0"
-      },
-      "etudiants_promotion": [
+  "specialite": [
+    {
+      "@nom": "MAM",
+      "@directeur": "ENS-1",
+      "promotion": [
         {
-          "@id": "ETU-2"
+          "@annee": "3A",
+          "responsable": {
+            "@idEnseignant": "ENS-0"
+          },
+          "etudiants_promotion": [
+            {
+              "@id": "ETU-3"
+            },
+            {
+              "@id": "ETU-4"
+            },
+            {
+              "@id": "ETU-5"
+            }
+          ],
+          "matieres_promotion": [
+            {
+              "@id": "MAT-3"
+            },
+            {
+              "@id": "MAT-4"
+            },
+            {
+              "@id": "MAT-5"
+            }
+          ]
         },
         {
-          "@id": "ETU-1"
-        }
-      ],
-      "matieres_promotion": [
-        {
-          "@id": "MAT-0"
-        },
-        {
-          "@id": "MAT-1"
+          "@annee": "4A",
+          "responsable": {
+            "@idEnseignant": "ENS-1"
+          },
+          "etudiants_promotion": {
+            "etudiant": {
+              "@id": "ETU-6"
+            }
+          },
+          "matieres_promotion": {
+            "matiere": {
+              "@id": "MAT-2"
+            }
+          }
         }
       ]
+    },
+    {
+      "@nom": "SI",
+      "@directeur": "ENS-2",
+      "promotion": {
+        "@annee": "3A",
+        "responsable": {
+          "@idEnseignant": "ENS-0"
+        },
+        "etudiants_promotion": [
+          {
+            "@id": "ETU-2"
+          },
+          {
+            "@id": "ETU-1"
+          },
+          {
+            "@id": "ETU-0"
+          }
+        ],
+        "matieres_promotion": [
+          {
+            "@id": "MAT-0"
+          },
+          {
+            "@id": "MAT-1"
+          },
+          {
+            "@id": "MAT-2"
+          }
+        ]
+      }
     }
-  }
+  ]
 }
