@@ -38,7 +38,40 @@
                 <annee>1995</annee>
             </date_de_naissance>
 		</etudiant>
+		<etudiant id="ETU-4">
+			<nom> Prune </nom>
+			<prenom> Pilonne </prenom>
+			<genre>Femme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1995</annee>
+            </date_de_naissance>
+		</etudiant>
+		<etudiant id="ETU-5">
+			<nom> Marion </nom>
+			<prenom> Sazrak </prenom>
+			<genre>Femme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1995</annee>
+            </date_de_naissance>
+		</etudiant>
+		<etudiant id="ETU-6">
+			<nom> Michel </nom>
+			<prenom> Drucker </prenom>
+			<genre>Femme</genre>
+            <date_de_naissance>
+                <jour>10</jour>
+                <mois>01</mois>
+                <annee>1995</annee>
+            </date_de_naissance>
+		</etudiant>
 	</etudiants>
+
+
+
 
 	<enseignants>
 		<enseignant id="ENS-0">
@@ -73,6 +106,9 @@
         </enseignant>
     </enseignants>
 
+
+
+
     <matieres>
 	    <matiere id="MAT-0">
 	    	<nom> Langages du web </nom>
@@ -99,7 +135,46 @@
 	    	</enseignants_matiere>	    
 		</matiere>
 	    <matiere id="MAT-2">
-	    	<nom> Concaption Logicielle </nom>
+	    	<nom> Conception Logicielle </nom>
+	    	<UE> 2 </UE>
+	    	<coeff> 3 </coeff>
+	    	<etudiants_matiere>
+	    		<etudiant id="ETU-2"/>
+	    		<etudiant id="ETU-1"/>
+	    	</etudiants_matiere>	 
+	    	<enseignants_matiere>
+	    		<enseignant id="ENS-2"/>
+	    		<enseignant id="ENS-1"/>
+	    	</enseignants_matiere>	    
+	    </matiere>
+	    <matiere id="MAT-3">
+	    	<nom> Probabilités </nom>
+	    	<UE> 2 </UE>
+	    	<coeff> 3 </coeff>
+	    	<etudiants_matiere>
+	    		<etudiant id="ETU-4"/>
+	    		<etudiant id="ETU-5"/>
+	    	</etudiants_matiere>	 
+	    	<enseignants_matiere>
+	    		<enseignant id="ENS-2"/>
+	    		<enseignant id="ENS-1"/>
+	    	</enseignants_matiere>	    
+	    </matiere>	    
+	    <matiere id="MAT-4">
+	    	<nom> Algorithmie </nom>
+	    	<UE> 2 </UE>
+	    	<coeff> 3 </coeff>
+	    	<etudiants_matiere>
+	    		<etudiant id="ETU-2"/>
+	    		<etudiant id="ETU-1"/>
+	    	</etudiants_matiere>	 
+	    	<enseignants_matiere>
+	    		<enseignant id="ENS-2"/>
+	    		<enseignant id="ENS-1"/>
+	    	</enseignants_matiere>	    
+	    </matiere>	    
+	    <matiere id="MAT-5">
+	    	<nom> Regressions linéaires </nom>
 	    	<UE> 2 </UE>
 	    	<coeff> 3 </coeff>
 	    	<etudiants_matiere>
@@ -114,16 +189,45 @@
 	</matieres>
 
 
+
+	<specialite nom="MAM" directeur="ENS-1">
+		<promotion annee="3A">
+			<responsable idEnseignant="ENS-0"></responsable>
+			<etudiants_promotion>
+	    		<etudiant id="ETU-3"/>
+	    		<etudiant id="ETU-4"/>
+	    		<etudiant id="ETU-5"/>
+	    	</etudiants_promotion>
+	    	<matieres_promotion>
+	    		<matiere id="MAT-3"/>
+	    		<matiere id="MAT-4"/>
+	    		<matiere id="MAT-5"/>
+	    	</matieres_promotion>
+		</promotion>
+
+		<promotion annee="4A">
+			<responsable idEnseignant="ENS-1"></responsable>
+			<etudiants_promotion>
+	    		<etudiant id="ETU-6"/>
+	    	</etudiants_promotion>
+	    	<matieres_promotion>
+	    		<matiere id="MAT-2"/>
+	    	</matieres_promotion>
+		</promotion>
+	</specialite>
+
 	<specialite nom="SI" directeur="ENS-2">
 		<promotion annee="3A">
 			<responsable idEnseignant="ENS-0"></responsable>
 			<etudiants_promotion>
 	    		<etudiant id="ETU-2"/>
 	    		<etudiant id="ETU-1"/>
+	    		<etudiant id="ETU-0"/>
 	    	</etudiants_promotion>
 	    	<matieres_promotion>
 	    		<matiere id="MAT-0"/>
 	    		<matiere id="MAT-1"/>
+	    		<matiere id="MAT-2"/>
 	    	</matieres_promotion>
 		</promotion>
 	</specialite>
