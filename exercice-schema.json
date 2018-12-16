@@ -1,0 +1,625 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "@schemaLocation": {
+      "type": "string"
+    },
+    "nom": {
+      "type": "string"
+    },
+    "diplome": {
+      "type": "string"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "etudiants": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "prenom": {
+              "type": "string"
+            },
+            "genre": {
+              "type": "string"
+            },
+            "date_de_naissance": {
+              "type": "object",
+              "properties": {
+                "jour": {
+                  "type": "string"
+                },
+                "mois": {
+                  "type": "string"
+                },
+                "annee": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "jour",
+                "mois",
+                "annee"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "prenom",
+            "genre",
+            "date_de_naissance"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "prenom": {
+              "type": "string"
+            },
+            "genre": {
+              "type": "string"
+            },
+            "date_de_naissance": {
+              "type": "object",
+              "properties": {
+                "jour": {
+                  "type": "string"
+                },
+                "mois": {
+                  "type": "string"
+                },
+                "annee": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "jour",
+                "mois",
+                "annee"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "prenom",
+            "genre",
+            "date_de_naissance"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "prenom": {
+              "type": "string"
+            },
+            "genre": {
+              "type": "string"
+            },
+            "date_de_naissance": {
+              "type": "object",
+              "properties": {
+                "jour": {
+                  "type": "string"
+                },
+                "mois": {
+                  "type": "string"
+                },
+                "annee": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "jour",
+                "mois",
+                "annee"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "prenom",
+            "genre",
+            "date_de_naissance"
+          ]
+        }
+      ]
+    },
+    "enseignants": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "prenom": {
+              "type": "string"
+            },
+            "genre": {
+              "type": "string"
+            },
+            "date_de_naissance": {
+              "type": "object",
+              "properties": {
+                "jour": {
+                  "type": "string"
+                },
+                "mois": {
+                  "type": "string"
+                },
+                "annee": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "jour",
+                "mois",
+                "annee"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "prenom",
+            "genre",
+            "date_de_naissance"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "prenom": {
+              "type": "string"
+            },
+            "genre": {
+              "type": "string"
+            },
+            "date_de_naissance": {
+              "type": "object",
+              "properties": {
+                "jour": {
+                  "type": "string"
+                },
+                "mois": {
+                  "type": "string"
+                },
+                "annee": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "jour",
+                "mois",
+                "annee"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "prenom",
+            "genre",
+            "date_de_naissance"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "prenom": {
+              "type": "string"
+            },
+            "genre": {
+              "type": "string"
+            },
+            "date_de_naissance": {
+              "type": "object",
+              "properties": {
+                "jour": {
+                  "type": "string"
+                },
+                "mois": {
+                  "type": "string"
+                },
+                "annee": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "jour",
+                "mois",
+                "annee"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "prenom",
+            "genre",
+            "date_de_naissance"
+          ]
+        }
+      ]
+    },
+    "matieres": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "UE": {
+              "type": "string"
+            },
+            "coeff": {
+              "type": "string"
+            },
+            "etudiants_matiere": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            },
+            "enseignants_matiere": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "UE",
+            "coeff",
+            "etudiants_matiere",
+            "enseignants_matiere"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "UE": {
+              "type": "string"
+            },
+            "coeff": {
+              "type": "string"
+            },
+            "etudiants_matiere": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            },
+            "enseignants_matiere": {
+              "type": "object",
+              "properties": {
+                "enseignant": {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              },
+              "required": [
+                "enseignant"
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "UE",
+            "coeff",
+            "etudiants_matiere",
+            "enseignants_matiere"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string"
+            },
+            "nom": {
+              "type": "string"
+            },
+            "UE": {
+              "type": "string"
+            },
+            "coeff": {
+              "type": "string"
+            },
+            "etudiants_matiere": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            },
+            "enseignants_matiere": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@id",
+            "nom",
+            "UE",
+            "coeff",
+            "etudiants_matiere",
+            "enseignants_matiere"
+          ]
+        }
+      ]
+    },
+    "specialite": {
+      "type": "object",
+      "properties": {
+        "@nom": {
+          "type": "string"
+        },
+        "@directeur": {
+          "type": "string"
+        },
+        "promotion": {
+          "type": "object",
+          "properties": {
+            "@annee": {
+              "type": "string"
+            },
+            "responsable": {
+              "type": "object",
+              "properties": {
+                "@idEnseignant": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@idEnseignant"
+              ]
+            },
+            "etudiants_promotion": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            },
+            "matieres_promotion": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "@annee",
+            "responsable",
+            "etudiants_promotion",
+            "matieres_promotion"
+          ]
+        }
+      },
+      "required": [
+        "@nom",
+        "@directeur",
+        "promotion"
+      ]
+    }
+  },
+  "required": [
+    "@schemaLocation",
+    "nom",
+    "diplome",
+    "ville",
+    "etudiants",
+    "enseignants",
+    "matieres",
+    "specialite"
+  ]
+}

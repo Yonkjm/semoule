@@ -1,0 +1,167 @@
+{
+  "@schemaLocation": "exercice.xsd",
+  "nom": "Polytech' Nice Sophia",
+  "diplome": "Ingénieur",
+  "ville": "Biot",
+  "etudiants": [
+    {
+      "@id": "ETU-0",
+      "nom": "Bonnet",
+      "prenom": "Theo",
+      "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1995"
+      }
+    },
+    {
+      "@id": "ETU-1",
+      "nom": "Islem",
+      "prenom": "Larabi",
+      "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1995"
+      }
+    },
+    {
+      "@id": "ETU-2",
+      "nom": "Nathan",
+      "prenom": "Strobbe",
+      "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1995"
+      }
+    }
+  ],
+  "enseignants": [
+    {
+      "@id": "ENS-0",
+      "nom": "Philippe",
+      "prenom": "Collet",
+      "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1975"
+      }
+    },
+    {
+      "@id": "ENS-1",
+      "nom": "Sebastien",
+      "prenom": "Mosser",
+      "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1975"
+      }
+    },
+    {
+      "@id": "ENS-2",
+      "nom": "Christophe",
+      "prenom": "Papazian",
+      "genre": "Homme",
+      "date_de_naissance": {
+        "jour": "10",
+        "mois": "01",
+        "annee": "1975"
+      }
+    }
+  ],
+  "matieres": [
+    {
+      "@id": "MAT-0",
+      "nom": "Langages du web",
+      "UE": "2",
+      "coeff": "3",
+      "etudiants_matiere": [
+        {
+          "@id": "ETU-2"
+        },
+        {
+          "@id": "ETU-1"
+        }
+      ],
+      "enseignants_matiere": [
+        {
+          "@id": "ENS-0"
+        },
+        {
+          "@id": "ENS-1"
+        }
+      ]
+    },
+    {
+      "@id": "MAT-1",
+      "nom": "C++",
+      "UE": "2",
+      "coeff": "3",
+      "etudiants_matiere": [
+        {
+          "@id": "ETU-2"
+        },
+        {
+          "@id": "ETU-1"
+        }
+      ],
+      "enseignants_matiere": {
+        "enseignant": {
+          "@id": "ENS-1"
+        }
+      }
+    },
+    {
+      "@id": "MAT-2",
+      "nom": "Concaption Logicielle",
+      "UE": "2",
+      "coeff": "3",
+      "etudiants_matiere": [
+        {
+          "@id": "ETU-2"
+        },
+        {
+          "@id": "ETU-1"
+        }
+      ],
+      "enseignants_matiere": [
+        {
+          "@id": "ENS-2"
+        },
+        {
+          "@id": "ENS-1"
+        }
+      ]
+    }
+  ],
+  "specialite": {
+    "@nom": "SI",
+    "@directeur": "ENS-2",
+    "promotion": {
+      "@annee": "3A",
+      "responsable": {
+        "@idEnseignant": "ENS-0"
+      },
+      "etudiants_promotion": [
+        {
+          "@id": "ETU-2"
+        },
+        {
+          "@id": "ETU-1"
+        }
+      ],
+      "matieres_promotion": [
+        {
+          "@id": "MAT-0"
+        },
+        {
+          "@id": "MAT-1"
+        }
+      ]
+    }
+  }
+}
